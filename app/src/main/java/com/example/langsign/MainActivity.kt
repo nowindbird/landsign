@@ -1,5 +1,5 @@
 package com.example.langsign
-
+#just text
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
