@@ -7,7 +7,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
 
-class loginPage : AppCompatActivity() {
+class LoginPage : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -18,8 +18,8 @@ class loginPage : AppCompatActivity() {
             insets
         }
     }
-class loginActivity:AppCompatActivity() {
-    private var User=User();
+class LoginActivity:AppCompatActivity() {
+    User=User();
 
 }
 }
