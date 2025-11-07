@@ -1,4 +1,4 @@
-package com.example.langsign
+package com.example.langsign.activity
 
 import android.os.Bundle
 import android.widget.Button
@@ -7,10 +7,8 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-
-
-// 数据类：用于存储用户信息
-
+import com.example.langsign.R
+import com.example.langsign.User
 
 class LoginPage : AppCompatActivity() {
     // 声明视图组件
@@ -19,6 +17,7 @@ class LoginPage : AppCompatActivity() {
     private lateinit var loginButton: Button
     private lateinit var forgotPasswordTextView: TextView
     private lateinit var registerTextView: TextView
+    private lateinit var errorTextView : TextView
 
     // 用户对象
     private val user = User()
@@ -32,7 +31,8 @@ class LoginPage : AppCompatActivity() {
         initViews()
         // 设置按钮点击事件
         setClickListeners()
-        IsinputRight()
+        //检测输入的是否正确,如果正确跳转并进入新页面，如果错误跳出报错信息
+        Is_input_Right()
 
     }
 
@@ -43,6 +43,7 @@ class LoginPage : AppCompatActivity() {
         loginButton = findViewById(R.id.loginButton)
         forgotPasswordTextView = findViewById(R.id.forgotPasswordTextView)
         registerTextView = findViewById(R.id.registerTextView)
+        errorTextView=findViewById(R.id.errorTextView)
     }
 
     // 设置点击事件
@@ -62,8 +63,7 @@ class LoginPage : AppCompatActivity() {
         }
 
     }
-    //前端输入时限定
-    private fun IsinputRight(){
+    private fun Is_input_Right(){
 
     }
 }
