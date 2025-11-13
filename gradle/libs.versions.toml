@@ -6,6 +6,8 @@ androidx-activity = "1.8.0"
 androidx-constraintlayout = "2.1.4"
 androidx-junit = "1.1.5"
 androidx-espresso-core = "3.5.1"
+room = "2.6.1"
+desugar-jdk-libs = "2.0.4" # Java 8 时间 API 适配版本
 
 # 第三方库
 material = "1.11.0"
@@ -19,7 +21,8 @@ okhttp-logging = "4.12.0"  # 4.x版本与Retrofit 2.9.0兼容，5.x可能有适�
 [plugins]
 android-application = { id = "com.android.application", version = "8.13.0" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version = "1.9.20" }
-
+kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version = "1.9.20" } # KSP 插件
+androidx-room = { id = "androidx.room", version.ref = "room" } # Room 插件
 [libraries]
 # AndroidX
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "androidx-core-ktx" }
@@ -28,6 +31,13 @@ androidx-activity = { group = "androidx.activity", name = "activity-ktx", versio
 androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "androidx-constraintlayout" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "androidx-junit" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "androidx-espresso-core" }
+# Room 依赖
+androidx-room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "room" }
+androidx-room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "room" }
+androidx-room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room" }
+# Java 8 时间 API 适配
+desugar-jdk-libs = { group = "com.android.tools", name = "desugar_jdk_libs", version.ref = "desugar-jdk-libs" }
+
 # 第三方库
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }

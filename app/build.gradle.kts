@@ -1,11 +1,17 @@
+import com.android.build.gradle.internal.utils.KSP_PLUGIN_ID
+import shadow.bundletool.com.android.tools.r8.internal.KS
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.androidx.room)
 }
-
+room {
+    schemaDirectory("$projectDir/schemas")// schema 存储路径
+}
 android {
     namespace = "com.example.langsign"
-    compileSdk = 36  // 简化写法（无需release()包装）
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.example.langsign"
@@ -29,6 +35,7 @@ android {
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
+        isCoreLibraryDesugaringEnabled = true
     }
     kotlinOptions {
         jvmTarget = "11"
@@ -56,4 +63,9 @@ dependencies {
     implementation(libs.retrofit)
     implementation(libs.retrofit.gson)
     implementation(libs.okhttp.logging)
+    // Room 数据库依赖
+    implementation(libs.androidx.room.runtime)
+    implementation(libs.androidx.room.ktx)
+    coreLibraryDesugaring(libs.desugar.jdk.libs)
+
 }
