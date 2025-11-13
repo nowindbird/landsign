@@ -12,7 +12,7 @@ class ApiService {
     // 1. 定义API接口
     interface ApiService {
         // 登录接口：POST请求，参数为LoginRequest对象（会自动转为JSON）
-        @POST("api/login")  // 接口路径（完整地址 = 基础URL + 此处路径）
+        @POST("api/login")  // 接口路径
         fun login(@Body request: LoginRequest): Call<LoginResponse>
     }
 

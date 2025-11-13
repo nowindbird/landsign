@@ -4,7 +4,8 @@ package com.example.langsign.dao
 data class LoginResponse(
     val success: Boolean,
     val msg: String,
-    val token: String?  // 可为null（登录失败时可能没有token）
+    val token: String? ,
+    val message:String?
 )
 
 // 登录请求参数模型（传给后端的用户名和密码）

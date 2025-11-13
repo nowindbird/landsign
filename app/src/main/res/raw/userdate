@@ -1,0 +1,6 @@
+var phoneNumber: String? = null  // 电话号码
+var accountNumber: String? = null  // 账户账号
+var password: String? = null  // 账户密码
+var userName: String? = null  // 账号名称
+var userGender: String? = null  // 性别（例如："男"、"女"、"保密"）
+var birthDate: LocalDate? = null  // 出生日期
