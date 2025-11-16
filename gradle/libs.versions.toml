@@ -16,7 +16,8 @@ junit = "4.13.2"
 # 网络相关（注意版本兼容性）
 retrofit = "2.9.0"  # Retrofit最新稳定版是2.9.0，3.0.0尚未正式发布
 gson-converter = "2.9.0"  # 必须与Retrofit版本一致
-okhttp-logging = "4.12.0"  # 4.x版本与Retrofit 2.9.0兼容，5.x可能有适配问题
+okhttp-logging = "4.12.0"
+activity = "1.8.0"  # 4.x版本与Retrofit 2.9.0兼容，5.x可能有适配问题
 
 [plugins]
 android-application = { id = "com.android.application", version = "8.13.0" }
@@ -45,3 +46,4 @@ junit = { group = "junit", name = "junit", version.ref = "junit" }
 retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
 retrofit-gson = { group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "gson-converter" }
 okhttp-logging = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "okhttp-logging" }
+activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }

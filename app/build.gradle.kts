@@ -1,6 +1,3 @@
-import com.android.build.gradle.internal.utils.KSP_PLUGIN_ID
-import shadow.bundletool.com.android.tools.r8.internal.KS
-
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
@@ -53,6 +50,7 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
+    implementation(libs.activity)
 
     // 测试依赖
     testImplementation(libs.junit)

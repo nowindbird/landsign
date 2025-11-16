@@ -9,9 +9,9 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import com.example.langsign.R
 import com.example.langsign.User
-import com.example.langsign.dao.LoginRequest
-import com.example.langsign.dao.LoginResponse
-import com.example.langsign.dao.ApiService
+import com.example.langsign.client.LoginRequest
+import com.example.langsign.client.LoginResponse
+import com.example.langsign.client.ApiService
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

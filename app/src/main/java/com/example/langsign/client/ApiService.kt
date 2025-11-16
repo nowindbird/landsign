@@ -1,10 +1,12 @@
-package com.example.langsign.dao
+package com.example.langsign.client
+
+import okhttp3.OkHttpClient
+import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Call
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.Body
 import retrofit2.http.POST
-
 
 class ApiService {
 
@@ -24,10 +26,10 @@ class ApiService {
 
         val apiService: ApiService by lazy {
             // 可选：添加日志拦截器（调试用）
-            val logging = okhttp3.logging.HttpLoggingInterceptor().apply {
-                level = okhttp3.logging.HttpLoggingInterceptor.Level.BODY
+            val logging = HttpLoggingInterceptor().apply {
+                level = HttpLoggingInterceptor.Level.BODY
             }
-            val client = okhttp3.OkHttpClient.Builder()
+            val client = OkHttpClient.Builder()
                 .addInterceptor(logging)  // 添加日志拦截器
                 .build()
 

@@ -1,4 +1,4 @@
-package com.example.langsign.dao
+package com.example.langsign.client
 
 // 登录接口响应数据模型
 data class LoginResponse(
